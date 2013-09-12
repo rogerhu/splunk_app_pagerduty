@@ -149,7 +149,7 @@ def main():
         details['events'].append(event)
 
     # This description could be any field in your event.
-    if '_raw' in details['events'][0]:
+    if details['events'] and '_raw' in details['events'][0]:
         default_description = details['events'][0]['_raw']
     else:
         default_description = ''
